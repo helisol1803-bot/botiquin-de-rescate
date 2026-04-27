@@ -125,7 +125,7 @@ export default function App() {
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-brand-dark leading-tight mb-6">
-              ¿Te duele ver a tu hijo frustrado, ansioso o con rabietas y no sabes cómo ayudarle? <span className="inline-block">💔</span>
+              ¿Te duele ver a tu hijo frustrado, ansioso o con rabietas y no sabes cómo ayudarlo? <span className="inline-block">💔</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-10">
               Ayuda a tu hijo a recuperar la calma, gestionar sus emociones y fortalecer su autoestima de forma <span className="text-orange-600 font-bold">INMEDIATA</span> con actividades prácticas.
@@ -202,7 +202,7 @@ export default function App() {
             </p>
             <p className="text-xl font-bold text-brand-dark italic">¿Te suena familiar?</p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Como madre, sabes que detrás de cada rabieta, cada "no quiero" y cada lágrima, hay emociones reales que tu hijo no sabe cómo expresar. Y lo más frustrante es que, aunque tu corazón de madre quiere ayudarle, muchas veces <strong>no sabes exactamente qué decir o qué hacer</strong>.
+              Como madre, sabes que detrás de cada rabieta, cada "no quiero" y cada lágrima, hay emociones reales que tu hijo no sabe cómo expresar. Y lo más frustrante es que, aunque tu corazón de madre quiere ayudarlo, muchas veces <strong>no sabes exactamente qué decir o qué hacer</strong>.
             </p>
           </motion.div>
         </div>
