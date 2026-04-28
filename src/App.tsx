@@ -427,22 +427,24 @@ export default function App() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">💰 El valor real de tu tranquilidad y la de tu hijo:</h2>
           <p className="text-gray-600 mb-6">Entendemos que invertir en la educación emocional no tiene precio, pero si comparamos costos:</p>
           
-          <div className="space-y-3 mb-6 text-left">
-            <div className="flex justify-between text-gray-500">
-              <span>Una sesión con psicólogo infantil:</span>
-              <span>$50 - $80 USD</span>
+          <div className="space-y-4 mb-8 text-left bg-gray-50/50 p-5 rounded-3xl border border-gray-100/50">
+            <div className="flex justify-between items-center py-2 border-b border-gray-100 border-dashed text-sm md:text-base">
+              <span className="text-gray-500 italic">Una sesión con psicólogo infantil:</span>
+              <span className="text-gray-400 font-medium whitespace-nowrap">$50 - $80 USD</span>
             </div>
-            <div className="flex justify-between text-gray-500">
-              <span>Un curso presencial de crianza:</span>
-              <span>$200 - $300 USD</span>
+            <div className="flex justify-between items-center py-2 border-b border-gray-100 border-dashed text-sm md:text-base">
+              <span className="text-gray-500 italic">Un curso presencial de crianza:</span>
+              <span className="text-gray-400 font-medium whitespace-nowrap">$200 - $300 USD</span>
             </div>
-            <div className="flex justify-between text-gray-500 border-b pb-2">
-              <span>Libros especializados:</span>
-              <span>$25 - $40 USD c/u</span>
+            <div className="flex justify-between items-center py-2 text-sm md:text-base">
+              <span className="text-gray-500 italic">Libros especializados:</span>
+              <span className="text-gray-400 font-medium whitespace-nowrap">$25 - $40 USD c/u</span>
             </div>
-            <div className="flex justify-between font-bold text-xl pt-2">
-              <span>Valor total del paquete:</span>
-              <span className="text-red-600">Más de $300 USD</span>
+            <div className="pt-3 mt-1 border-t-2 border-gray-200">
+              <div className="flex justify-between items-center py-1">
+                <span className="font-black text-gray-700 uppercase tracking-tighter">Valor total del paquete:</span>
+                <span className="text-red-600 font-black text-xl line-through decoration-2">+$300 USD</span>
+              </div>
             </div>
           </div>
           
