@@ -130,14 +130,6 @@ export default function App() {
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-10">
               Ayuda a tu hijo a recuperar la calma, gestionar sus emociones y fortalecer su autoestima de forma <span className="text-orange-600 font-bold">INMEDIATA</span> con actividades prácticas.
             </p>
-            <motion.a 
-              href="#pricing"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary inline-block text-lg md:text-xl px-12 py-5"
-            >
-              SÍ, QUIERO EL BOTIQUÍN AHORA
-            </motion.a>
           </div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
@@ -183,7 +175,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1602030638412-bb8dcc0bc8b0?auto=format&fit=crop&q=80&w=1000" 
+              src="https://i.postimg.cc/3Rv7cX4N/cosmos-image-1775665531043.jpg" 
               alt="Niño expresando frustración y necesidad de apoyo emocional" 
               className="rounded-3xl shadow-2xl object-cover w-full aspect-[4/5]"
               referrerPolicy="no-referrer"
@@ -215,6 +207,15 @@ export default function App() {
           <h3 className="text-4xl md:text-5xl font-black text-brand-dark mb-6">
             EL BOTIQUÍN DE RESCATE EMOCIONAL 🚑
           </h3>
+          <div className="flex justify-center mb-10">
+            <img 
+              src="https://i.postimg.cc/q78XpY36/botiquin.jpg" 
+              alt="Botiquín de Rescate Emocional" 
+              className="max-w-2xl w-full rounded-3xl shadow-xl border-4 border-white"
+              referrerPolicy="no-referrer"
+              crossOrigin="anonymous"
+            />
+          </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             El método que funciona como un botiquín de primeros auxilios emocionales porque va directo al grano.
           </p>
@@ -248,9 +249,9 @@ export default function App() {
           {[
             { icon: <Brain className="text-purple-500" />, title: "Dominio emocional inmediato", desc: "Tu hijo reconocerá y gestionará 8 emociones intensas." },
             { icon: <Sparkles className="text-yellow-500" />, title: "Calma instantánea", desc: "Técnicas que devuelven la paz en momentos de crisis." },
+            { icon: <Home className="text-orange-500" />, title: "Ambiente armonioso", desc: "Transforma tu hogar en un espacio de tranquilidad." },
             { icon: <ShieldCheck className="text-green-500" />, title: "Autoestima sólida", desc: "Actividades que fortalecen la confianza en sí mismo." },
-            { icon: <MessageCircle className="text-blue-500" />, title: "Comunicación fluida", desc: "Mejora el diálogo y la resolución de conflictos familiares." },
-            { icon: <Home className="text-orange-500" />, title: "Ambiente armonioso", desc: "Transforma tu hogar en un espacio de tranquilidad." }
+            { icon: <MessageCircle className="text-blue-500" />, title: "Comunicación fluida", desc: "Mejora el diálogo y la resolución de conflictos familiares." }
           ].map((benefit, i) => (
             <motion.div 
               key={i}
@@ -258,7 +259,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100"
+              className={`flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 ${i === 2 ? "md:col-span-2 md:mx-auto md:max-w-xl w-full" : ""}`}
             >
               <div className="shrink-0">{benefit.icon}</div>
               <div>
@@ -267,6 +268,16 @@ export default function App() {
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <motion.a 
+            href="#pricing"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn-primary inline-block text-lg md:text-xl px-12 py-5"
+          >
+            SÍ, QUIERO EL BOTIQUÍN AHORA
+          </motion.a>
         </div>
       </Section>
 
@@ -281,13 +292,13 @@ export default function App() {
               name: "María Elena", 
               role: "Madre de 2 niños", 
               text: "En solo una semana, mi hijo de 7 años ya me dice 'mamá, siento que tengo rabia' en lugar de explotar. ¡Es increíble!",
-              img: "https://picsum.photos/seed/mom1/100/100"
+              img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
             },
             { 
-              name: "Asunción", 
+              name: "Fabiola", 
               role: "Madre de 1 niña", 
               text: "El botiquín me salvó las mañanas. Antes eran gritos, ahora aplicamos la técnica de los 5 minutos y todo fluye mejor.",
-              img: "https://picsum.photos/seed/mom2/100/100"
+              img: "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=150&h=150"
             }
           ].map((testimonial, i) => (
             <motion.div 
@@ -322,7 +333,7 @@ export default function App() {
       </Section>
 
       {/* 8. No es para ti si */}
-      <Section className="bg-gray-50">
+      <Section className="bg-sky-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-8 text-center">⚠️ Este método NO es para ti si:</h2>
           <div className="space-y-4">
@@ -355,7 +366,7 @@ export default function App() {
                 <p className="text-gray-600">Libro digital de +190 páginas con +150 actividades prácticas organizadas por emociones. Acceso directo a cada emoción según la crisis.</p>
               </div>
             </div>
-            <img src="https://picsum.photos/seed/book/800/400" alt="Guía Digital" className="rounded-2xl shadow-lg w-full object-cover h-48" referrerPolicy="no-referrer" />
+            <img src="https://i.postimg.cc/BvMb5BWV/libros.jpg" alt="Guía Digital El Botiquín de Rescate Emocional" className="rounded-2xl shadow-lg w-full object-cover h-48" referrerPolicy="no-referrer" />
           </div>
           
           <div className="space-y-4">
@@ -365,7 +376,7 @@ export default function App() {
               { title: "Yoga de las Emociones", desc: "Técnicas cuerpo-mente para niños." },
               { title: "Escudo de la Valentía", desc: "Herramienta contra miedos nocturnos." }
             ].map((item, i) => (
-              <div key={i} className="p-5 bg-white border border-gray-100 rounded-2xl shadow-sm flex gap-3">
+              <div key={i} className="p-5 bg-sky-50 border border-sky-100 rounded-2xl shadow-sm flex gap-3">
                 <CheckCircle2 className="text-green-500 shrink-0" />
                 <div>
                   <h4 className="font-bold text-sm">{item.title}</h4>
@@ -406,51 +417,72 @@ export default function App() {
         </div>
         <div className="text-center mt-10">
           <p className="text-xl font-bold text-brand-dark">Valor total de los bonos: <span className="text-orange-600">$23 USD</span></p>
+          <p className="text-2xl font-black text-orange-600 mt-1 uppercase">Hoy totalmente gratis</p>
         </div>
       </Section>
 
       {/* 11 & 12. Pricing & CTA 1 */}
-      <Section id="pricing" className="text-center">
-        <div className="max-w-2xl mx-auto bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-100">
-          <h2 className="text-2xl font-bold mb-8">💰 El valor real de esta transformación:</h2>
+      <Section id="pricing" className="text-center bg-sky-50">
+        <div className="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-sky-100">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">💰 El valor real de tu tranquilidad y la de tu hijo:</h2>
+          <p className="text-gray-600 mb-8">Entendemos que invertir en la educación emocional no tiene precio, pero si comparamos costos:</p>
+          
           <div className="space-y-4 mb-10 text-left">
             <div className="flex justify-between text-gray-500">
               <span>Una sesión con psicólogo infantil:</span>
-              <span>$50-80 USD</span>
+              <span>$50 - $80 USD</span>
             </div>
             <div className="flex justify-between text-gray-500">
-              <span>Curso presencial de crianza:</span>
-              <span>$200-300 USD</span>
+              <span>Un curso presencial de crianza:</span>
+              <span>$200 - $300 USD</span>
             </div>
             <div className="flex justify-between text-gray-500 border-b pb-4">
               <span>Libros especializados:</span>
-              <span>$25-40 USD c/u</span>
+              <span>$25 - $40 USD c/u</span>
             </div>
             <div className="flex justify-between font-bold text-xl pt-4">
-              <span>Valor de todo el paquete:</span>
-              <span className="text-red-600">$300+ USD</span>
+              <span>Valor total del paquete:</span>
+              <span className="text-red-600">Más de $300 USD</span>
             </div>
           </div>
           
-          <div className="mb-10">
-            <p className="text-gray-400 line-through text-2xl mb-2">$15.90</p>
+          <div className="mb-10 p-6 bg-orange-50 rounded-3xl border border-orange-100">
+            <p className="text-orange-600 font-black text-xl mb-4">🚀 ¡OFERTA DE LANZAMIENTO!</p>
+            <p className="text-gray-600 mb-4">Hoy no pagarás $300, ni siquiera los <span className="line-through">$15.90</span> habituales...</p>
             <p className="text-6xl font-black text-brand-dark">Solo $7.90 USD</p>
-            <p className="text-orange-600 font-bold mt-2">¡OFERTA DE LANZAMIENTO!</p>
           </div>
 
           <motion.a 
             href="#" 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary w-full text-xl py-6 mb-6"
+            className="btn-primary w-full text-lg md:text-xl py-6 mb-8 block leading-tight"
           >
-            SÍ, QUIERO TRANSFORMAR LA VIDA EMOCIONAL DE MI HIJO
+            ¡SÍ, QUIERO TRANSFORMAR LA VIDA EMOCIONAL DE MI HIJO!
           </motion.a>
           
-          <div className="flex flex-wrap justify-center gap-4 text-sm font-bold text-gray-500">
-            <span className="flex items-center gap-1"><Download className="w-4 h-4" /> Descarga instantánea</span>
-            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4" /> Impresión ilimitada</span>
-            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4" /> Garantía 7 días</span>
+          <div className="flex flex-col gap-4 text-left max-w-sm mx-auto">
+            <div className="flex items-center gap-3 text-gray-700">
+              <span className="text-2xl">✅</span>
+              <div>
+                <p className="font-bold">Descarga instantánea:</p>
+                <p className="text-sm text-gray-500">Empieza hoy mismo.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 text-gray-700">
+              <span className="text-2xl">🖨️</span>
+              <div>
+                <p className="font-bold">Impresión ilimitada:</p>
+                <p className="text-sm text-gray-500">Úsalo las veces que necesites.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 text-gray-700">
+              <span className="text-2xl">🛡️</span>
+              <div>
+                <p className="font-bold">Garantía total:</p>
+                <p className="text-sm text-gray-500">7 días de satisfacción asegurada.</p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -530,10 +562,11 @@ export default function App() {
           <div className="relative">
             <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full" />
             <img 
-              src="https://picsum.photos/seed/science/800/800" 
-              alt="Neurociencia infantil" 
+              src="https://i.postimg.cc/3Rv7cX4N/cosmos-image-1775665531043.jpg" 
+              alt="Neurociencia infantil y equilibrio emocional" 
               className="relative rounded-[3rem] shadow-2xl"
               referrerPolicy="no-referrer"
+              crossOrigin="anonymous"
             />
           </div>
         </div>
@@ -584,8 +617,16 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <footer className="py-8 text-center text-gray-400 text-sm border-t border-gray-100">
-        <p>© {new Date().getFullYear()} El Botiquín de Rescate Emocional. Todos los derechos reservados.</p>
+      <footer className="py-12 text-center text-gray-400 text-sm border-t border-gray-100 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 space-y-4">
+          <p>© {new Date().getFullYear()} El Botiquín de Rescate Emocional. Todos los derechos reservados.</p>
+          <div className="pt-4 border-t border-gray-200">
+            <p className="leading-relaxed">
+              Descargo de responsabilidad: Este sitio y “El Botiquín de Rescate Emocional” no están afiliados, patrocinados ni administrados por Facebook/Meta; 
+              Facebook no avala esta oferta y cualquier referencia a su nombre o plataforma se usa únicamente con fines informativos.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
