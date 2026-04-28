@@ -30,7 +30,7 @@ import { motion, AnimatePresence } from 'motion/react';
 // --- Components ---
 
 const Section = ({ children, className = "", id = "" }: { children: React.ReactNode, className?: string, id?: string }) => (
-  <section id={id} className={`py-16 px-6 md:py-24 ${className}`}>
+  <section id={id} className={`py-8 px-6 md:py-12 ${className}`}>
     <div className="max-w-5xl mx-auto">
       {children}
     </div>
@@ -112,7 +112,7 @@ export default function App() {
     <div className="min-h-screen selection:bg-orange-200">
       
       {/* 1 & 2. Hero Section */}
-      <header className="pt-20 pb-16 px-6 text-center bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+      <header className="pt-10 pb-4 px-6 text-center bg-gradient-to-b from-blue-50 to-white overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function App() {
       </header>
 
       {/* 3. Historia */}
-      <Section className="bg-white">
+      <Section className="bg-white !pt-0">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -201,8 +201,8 @@ export default function App() {
       </Section>
 
       {/* 4. UVP */}
-      <Section className="bg-blue-50 rounded-[3rem] my-12">
-        <div className="text-center mb-16">
+      <Section className="bg-blue-50 rounded-[3rem] my-6">
+        <div className="text-center mb-8">
           <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Presentamos la Guía:</h2>
           <h3 className="text-4xl md:text-5xl font-black text-brand-dark mb-6">
             EL BOTIQUÍN DE RESCATE EMOCIONAL 🚑
@@ -242,7 +242,7 @@ export default function App() {
 
       {/* 5. Benefits */}
       <Section>
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">✨ Lo que lograrás con tu hijo:</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -283,7 +283,7 @@ export default function App() {
 
       {/* 6. Prueba Social */}
       <Section className="bg-brand-dark text-white rounded-[3rem]">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">👥 Madres como tú ya están viendo resultados:</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
@@ -354,7 +354,7 @@ export default function App() {
 
       {/* 9. Entregables */}
       <Section>
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">📚 Todo lo que recibes hoy:</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -422,12 +422,12 @@ export default function App() {
       </Section>
 
       {/* 11 & 12. Pricing & CTA 1 */}
-      <Section id="pricing" className="text-center bg-sky-50">
-        <div className="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-sky-100">
+      <Section id="pricing" className="text-center bg-sky-50 !py-6">
+        <div className="max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-[3rem] shadow-2xl border border-sky-100">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">💰 El valor real de tu tranquilidad y la de tu hijo:</h2>
-          <p className="text-gray-600 mb-8">Entendemos que invertir en la educación emocional no tiene precio, pero si comparamos costos:</p>
+          <p className="text-gray-600 mb-6">Entendemos que invertir en la educación emocional no tiene precio, pero si comparamos costos:</p>
           
-          <div className="space-y-4 mb-10 text-left">
+          <div className="space-y-3 mb-6 text-left">
             <div className="flex justify-between text-gray-500">
               <span>Una sesión con psicólogo infantil:</span>
               <span>$50 - $80 USD</span>
@@ -436,32 +436,32 @@ export default function App() {
               <span>Un curso presencial de crianza:</span>
               <span>$200 - $300 USD</span>
             </div>
-            <div className="flex justify-between text-gray-500 border-b pb-4">
+            <div className="flex justify-between text-gray-500 border-b pb-2">
               <span>Libros especializados:</span>
               <span>$25 - $40 USD c/u</span>
             </div>
-            <div className="flex justify-between font-bold text-xl pt-4">
+            <div className="flex justify-between font-bold text-xl pt-2">
               <span>Valor total del paquete:</span>
               <span className="text-red-600">Más de $300 USD</span>
             </div>
           </div>
           
-          <div className="mb-10 p-6 bg-orange-50 rounded-3xl border border-orange-100">
-            <p className="text-orange-600 font-black text-xl mb-4">🚀 ¡OFERTA DE LANZAMIENTO!</p>
-            <p className="text-gray-600 mb-4">Hoy no pagarás $300, ni siquiera los <span className="line-through">$15.90</span> habituales...</p>
-            <p className="text-6xl font-black text-brand-dark">Solo $7.90 USD</p>
+          <div className="mb-6 p-6 bg-orange-50 rounded-3xl border border-orange-100">
+            <p className="text-orange-600 font-black text-xl mb-2">🚀 ¡OFERTA DE LANZAMIENTO!</p>
+            <p className="text-gray-600 mb-2">Hoy no pagarás $300, ni siquiera los <span className="line-through">$15.90</span> habituales...</p>
+            <p className="text-5xl md:text-6xl font-black text-brand-dark">Solo $7.90 USD</p>
           </div>
 
           <motion.a 
             href="#" 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary w-full text-lg md:text-xl py-6 mb-8 block leading-tight"
+            className="btn-primary w-full text-lg md:text-xl py-6 mb-6 block leading-tight"
           >
             ¡SÍ, QUIERO TRANSFORMAR LA VIDA EMOCIONAL DE MI HIJO!
           </motion.a>
           
-          <div className="flex flex-col gap-4 text-left max-w-sm mx-auto">
+          <div className="flex flex-col gap-3 text-left max-w-sm mx-auto">
             <div className="flex items-center gap-3 text-gray-700">
               <span className="text-2xl">✅</span>
               <div>
@@ -488,8 +488,8 @@ export default function App() {
       </Section>
 
       {/* 13. FAQ */}
-      <Section className="bg-white">
-        <h2 className="text-3xl font-bold mb-12 text-center">❓ Preguntas Frecuentes:</h2>
+      <Section className="bg-white !py-4">
+        <h2 className="text-3xl font-bold mb-6 text-center">❓ Preguntas Frecuentes:</h2>
         <div className="max-w-3xl mx-auto">
           <FAQItem 
             question="¿Necesito ser psicólogo para aplicarlo?" 
@@ -511,31 +511,31 @@ export default function App() {
       </Section>
 
       {/* 14. Urgency */}
-      <Section className="bg-red-50 text-center">
+      <Section className="bg-red-50 text-center !py-6">
         <div className="max-w-3xl mx-auto">
-          <AlertCircle className="w-16 h-16 text-red-600 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-red-900 mb-4">⏰ ATENCIÓN: Oferta por tiempo limitado</h2>
-          <p className="text-lg text-red-800 mb-8">El descuento del 50% termina pronto. Después de este tiempo, el precio vuelve a $15.90 USD.</p>
+          <AlertCircle className="w-12 h-12 text-red-600 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-red-900 mb-2">⏰ ATENCIÓN: Oferta por tiempo limitado</h2>
+          <p className="text-lg text-red-800 mb-6">El descuento del 50% termina pronto. Después de este tiempo, el precio vuelve a $15.90 USD.</p>
           <CountdownTimer />
         </div>
       </Section>
 
       {/* 15. CTA 2 */}
-      <Section className="text-center">
-        <h2 className="text-3xl font-bold mb-8">🎯 No dejes que esta oportunidad se escape</h2>
+      <Section className="text-center !py-8">
+        <h2 className="text-2xl font-bold mb-6">🎯 No dejes que esta oportunidad se escape</h2>
         <motion.a 
           href="#pricing"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="btn-primary inline-block text-2xl px-16 py-8 shadow-2xl"
+          className="btn-primary inline-block text-xl px-12 py-6 shadow-2xl"
         >
           QUIERO MI BOTIQUÍN DE RESCATE EMOCIONAL AHORA
         </motion.a>
-        <p className="mt-6 text-xl font-bold text-gray-500">Solo $7.90 USD - Descarga Inmediata</p>
+        <p className="mt-4 text-lg font-bold text-gray-500">Solo $7.90 USD - Descarga Inmediata</p>
       </Section>
 
       {/* 16. Análisis Profundo */}
-      <Section className="bg-blue-900 text-white rounded-[4rem] my-20">
+      <Section className="bg-blue-900 text-white rounded-[4rem] my-8 !py-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-8">🔍 ¿Por qué funciona El Botiquín de Rescate Emocional?</h2>
@@ -573,7 +573,7 @@ export default function App() {
       </Section>
 
       {/* 17. Final Closure */}
-      <Section className="text-center pb-32">
+      <Section className="text-center pb-16">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -590,7 +590,7 @@ export default function App() {
             href="#pricing"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary text-2xl px-16 py-8"
+            className="btn-primary text-2xl px-16 py-8 hidden md:inline-block"
           >
             OBTENER EL BOTIQUÍN DE RESCATE EMOCIONAL - $7.90
           </motion.a>
