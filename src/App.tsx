@@ -205,7 +205,7 @@ export default function App() {
         <div className="text-center mb-8">
           <h2 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-4">Presentamos la Guía:</h2>
           <h3 className="text-4xl md:text-5xl font-black text-brand-dark mb-6">
-            EL BOTIQUÍN DE RESCATE EMOCIONAL 🚑
+            EL BOTIQUÍN DE RESCATE EMOCIONAL
           </h3>
           <div className="flex justify-center mb-10">
             <img 
@@ -221,7 +221,7 @@ export default function App() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {[
             { icon: <Zap className="w-8 h-8 text-orange-500" />, title: "Acceso Directo", desc: "Vas directo a la página exacta según la emoción que tu hijo está viviendo." },
             { icon: <Clock className="w-8 h-8 text-blue-500" />, title: "Sin Teorías", desc: "Sin leer de principio a fin. Actividades que funcionan en 5-10 minutos." },
@@ -230,7 +230,7 @@ export default function App() {
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-blue-100"
+              className="bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-blue-100"
             >
               <div className="mb-4">{item.icon}</div>
               <h4 className="text-xl font-bold mb-2">{item.title}</h4>
@@ -259,7 +259,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 ${i === 2 ? "md:col-span-2 md:mx-auto md:max-w-xl w-full" : ""}`}
+              className={`flex gap-4 p-4 md:p-6 bg-gray-50 rounded-2xl border border-gray-100 ${i === 2 ? "md:col-span-2 md:mx-auto md:max-w-xl w-full" : ""}`}
             >
               <div className="shrink-0">{benefit.icon}</div>
               <div>
@@ -357,8 +357,8 @@ export default function App() {
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">📚 Todo lo que recibes hoy:</h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-blue-50 p-8 rounded-3xl border border-blue-100">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="lg:col-span-2 bg-blue-50 p-4 md:p-8 rounded-3xl border border-blue-100">
             <div className="flex gap-4 items-start mb-6">
               <BookOpen className="w-10 h-10 text-blue-600 shrink-0" />
               <div>
@@ -407,7 +407,7 @@ export default function App() {
               desc: "Actividades que tu hijo puede hacer solo para calmarse mientras tú recuperas energías." 
             }
           ].map((bono, i) => (
-            <div key={i} className="bg-white p-8 rounded-3xl shadow-sm relative overflow-hidden">
+            <div key={i} className="bg-white p-5 md:p-8 rounded-3xl shadow-sm relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">GRATIS</div>
               <h4 className="text-xl font-bold mb-2">{bono.title}</h4>
               <p className="text-gray-400 line-through mb-4">Valor: {bono.value}</p>
